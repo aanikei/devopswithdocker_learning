@@ -1,0 +1,24 @@
+services:
+  frontend:
+    image: frontend
+    ports:
+      - 127.0.0.1:5000:5000
+
+  backend:
+    image: backend
+    ports:
+      - 127.0.0.1:8080:8080
+
+  redis:
+    image: redis
+
+  postgres:
+    image: postgres
+    shm_size: 128mb
+    ports:
+      - 127.0.0.1:5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    volumes:
+      - ./database:/var/lib/postgresql/data

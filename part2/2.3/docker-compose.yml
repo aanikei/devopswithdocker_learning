@@ -1,0 +1,13 @@
+services:
+  frontend:
+    image: frontend
+    ports:
+      - 127.0.0.1:5000:5000
+    container_name: frontend2.3
+
+  backend:
+    image: backend
+    ports:
+      - 127.0.0.1:8080:8080
+    container_name: backend2.3
+
