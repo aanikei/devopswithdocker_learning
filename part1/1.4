@@ -1,0 +1,18 @@
+vboxuser@Ubuntu:~$ docker run -it -d ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+
+vboxuser@Ubuntu:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+b37a318dd17b   ubuntu    "sh -c 'while true; …"   3 seconds ago   Up 3 seconds             goofy_tu
+
+vboxuser@Ubuntu:~$ docker exec goofy_tu sh -c 'apt-get -qq update; apt-get -y install curl > /dev/null'
+
+vboxuser@Ubuntu:~$ docker attach goofy_tu 
+helsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.22.1</center>
+</body>
+</html>

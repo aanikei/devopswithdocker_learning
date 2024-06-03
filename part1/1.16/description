@@ -1,0 +1,3 @@
+Used simple calculator app, created image based on it, pushed it to Docker Hub (it is all was done as part of exercise 1.15) and simply used the link from Docker Hub to deploy app in Render.
+
+https://calc-vpgz.onrender.com/

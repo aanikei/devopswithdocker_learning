@@ -1,0 +1,8 @@
+vboxuser@Ubuntu:~$ docker run -d devopsdockeruh/simple-web-service:ubuntu
+
+vboxuser@Ubuntu:~$ docker ps
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED          STATUS          PORTS     NAMES
+bd0e460a2de4   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"   24 seconds ago   Up 23 seconds             peaceful_hawking
+
+vboxuser@Ubuntu:~$ docker exec peaceful_hawking tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'

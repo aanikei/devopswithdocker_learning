@@ -1,0 +1,13 @@
+vboxuser@Ubuntu:~$ docker pull devopsdockeruh/simple-web-service:ubuntu
+
+vboxuser@Ubuntu:~$ docker pull devopsdockeruh/simple-web-service:alpine
+
+vboxuser@Ubuntu:~$ docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   3 years ago   15.7MB
+
+vboxuser@Ubuntu:~$ docker run --name alpine -d devopsdockeruh/simple-web-service:alpine 
+
+vboxuser@Ubuntu:~$ docker exec alpine tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
