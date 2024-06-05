@@ -1,0 +1,1 @@
+Removed port mapping from docker-compose.yml, added rules to nginx to proxy_pass /ping to http://backend:8080/ping, /messages to http://backend:8080/messages and changed ENV variables in both Dockerfiles to http://localhost
